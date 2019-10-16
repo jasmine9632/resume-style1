@@ -18,11 +18,17 @@ margin-left:200px;
 //用伪元素画线
 
 .user h1::after{
+
         content: '';
+        
         display: block;
+        
         margin:16px auto;
+        
         border-top:1px solid #ccc;
+        
         width:60px;
+        
       }
       
       
