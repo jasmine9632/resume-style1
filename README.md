@@ -1,9 +1,15 @@
 # resume-style1
 
+浮动布局
+
 .cleafix::after{
+
 content:'''
+
 display:block;
+
 clear:both;
+
 }
 
 
