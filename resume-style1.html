@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by anonymous (http://jsbin.com/fapotukoqo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,maximum-scale=1.0,
+                                   minimum-scale=1.0">
+    <title>CV1</title> 
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_908787_kekc8lrkg7e.css">
+    <style>
+      /* css reset */
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      a{
+        text-decoration: none;
+        color:#333;
+      }
+      /* common css */
+
+      .clearfix::after{
+        content:"";
+        display: block;
+        clear: both;
+      }
+      .pill{
+        background: #000;
+        color:#fff;
+        display:inline-block;
+        font-size: 14px;
+        width:140px;
+        line-height: 20px;
+        text-align: center;
+        border-radius:20px;
+      }
+      .layout{
+        margin:20px auto;
+      }
+
+      /* page css */
+      .page{
+        font:16px/1.5 SimSun, STKaiti, "Microsoft YaHei", SimHei, Helvetica, Arial;
+        color:#333;
+      }
+
+      .wrapper{
+        background-color: #ececec;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 40px;
+      }
+      .aside{
+        float: left;
+        width:280px;
+      }
+      .user{
+        text-align:center;
+        padding-bottom: 20px;
+      }
+      .user h1{
+        font-size: 40px;
+
+      }
+      .user h1::after{
+        content: '';
+        display: block;
+        margin:16px auto;
+        border-top:1px solid #ccc;
+        width:60px;
+
+
+      }
+      .aside .user::after{
+        content:'';
+        display: block;
+        margin-top: 20px;
+        border-right: 140px solid #d6d6d6;
+        border-left: 140px solid transparent;
+        border-top: 20px solid #d6d6d6;
+        border-bottom: 20px solid transparent;
+      }
+      .contact{
+        padding: 20px;
+      }
+      .contact li{
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+        line-height: 40px;
+      }
+      .contact li .iconfont{
+        font-size: 20px;
+        display: inline-block;
+        border-right: 1px solid #ccc;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: 10px;
+        color:#7bbaaa;
+
+      }
+      .skills{
+        padding: 20px;
+        background: #7bbaaa;
+        color:#fff;
+      }
+      .skills dt{
+        color:#eee;
+        margin-top: 30px;
+      }
+      .skills dd{
+        height:4px;
+        background: #74c5b5;
+        border-radius: 2px;
+        margin-top: 10px;
+      }
+      .skills .mastery{
+        display: block;
+        height:4px;
+        background: #fff;
+        border-radius:2px;
+      }
+      .others h2{
+        padding:20px  0 0 20px;
+      }
+      .main{
+        margin-left: 280px;
+        background: #fff;
+        padding: 40px ;
+        margin-right: 20px;
+      }
+      .main .intro{
+        overflow: auto;
+      }
+      .main .intro img{
+        float: left;
+        width:80px;
+        height:80px;
+
+      }
+      .main .intro p{
+        margin-left: 120px;
+      }
+      .section .pill{
+        float: left;
+        margin-top: 5px;
+      }
+      .section h2{
+        font-size: 40px;
+        color:#d9d9d9;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .section .more{
+        margin-left: 150px;
+        border-left: 1px solid #eee;
+      }
+      .section h3{
+        color:#666;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      .section h3 strong{
+        color:#111;
+        font-weight: bold;
+      }
+      .section h3::before{
+        content:"";
+        display: inline-block;
+        width:6px;
+        height:6px;
+        border-radius:6px;
+        border:2px solid #7bbaaa;
+        margin-right: 20px;
+        position: relative;
+        left:-5px;
+      }
+      .section h4{
+        color:#111;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+      .section .more ul{
+        margin-left: 50px;
+        padding-bottom: 20px;
+      }
+      .section .more li{
+        color:#666;
+        font-size: 14px;
+      }
+      @media print{
+        .aside{
+          width:200px;
+        }
+        .main{margin-left: 200px;}
+        .aside .user::after{
+          border-right-width: 100px;
+          border-left-width: 100px;
+        }
+        .pill{
+          display: none;
+        }
+        .section .more{
+          margin-left: 20px;
+        }
+        .wrapper{
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper layout clearfix">
+      <div class="aside">
+        <div class="user">
+          <h1>jasmine</h1>
+          <p>应聘前端工程师</p>
+        </div>
+        <ul class="contact">
+          <li><span class="iconfont icon-email"></span> hunger@jirengu.com</li>
+          <li><span class="iconfont icon-phone"></span> 13066668888</li>
+          <li><span class="iconfont icon-experience"></span> 1年前端经验</li>
+          <li><span class="iconfont icon-education"></span> 本科</li>
+        </ul>
+        <div class="skills">
+          <h2>我的技能</h2>
+          <dt>HTML/JAVASCRIPT/CSS/SVG
+          <dd><span class="mastery" style="width:60%"></span></dd>
+          </dt>
+        <dt>HTML/JAVASCRIPT/CSS/SVG
+        <dd><span class="mastery" style="width:60%"></span></dd>
+        </dt>
+      <dt>HTML/JAVASCRIPT/CSS/SVG
+      <dd><span class="mastery" style="width:60%"></span></dd>
+      </dt>
+    </div>
+  <div class="others">
+    <h2>其他</h2>
+    <ul class="contact">
+      <li><span class="iconfont icon-email"></span> hunger@jirengu.com</li>
+      <li><span class="iconfont icon-phone"></span> 13066668888</li>
+      <li><span class="iconfont icon-experience"></span> 1年前端经验</li>
+      <li><span class="iconfont icon-education"></span> 本科</li>
+    </ul>
+  </div>
+  </div> 
+<div class="main ">
+  <div class="intro clearfix">
+    <img src="https://via.placeholder.com/80.png" alt="">
+    <p>1年前端开发经验，熟悉Vue技术栈，熟悉模块化、工程化开发流程，Webpack的配置小能手，熟练使用ES6写代码，有小程序、移动端开发经验</p>
+  </div>
+  <div class="education section">
+    <h2>教育经历</h2>
+    <div class="item">
+      <div class="left pill">
+        09/2013 - 07/2017
+      </div>
+      <div class="more">
+        <h3><strong>电子科技大学</strong>, 985、211</h3>
+        <ul>
+          <li>专业排名前20%</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="experience section">
+      <h2>工作经历</h2>
+      <div class="detail">
+        <div class="left pill">
+          09/2013 - 07/2017
+        </div>
+        <div class="more">
+          <h3><strong>杭州饥人谷教育科技有限公司</strong>, 前端开发工程师</h3>
+          <ul>
+            <li>工作期间参与开发和维护饥人谷官网、课程平台、移动端网站、小程序，为数千同学线上学习提供技术支撑</li>
+            <li>公司前端编码规范的制定、前端UI组件库的沉淀</li>
+            <li>多次作为项目负责人主导项目立项到上线整个过程</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="project section">
+      <h2>项目经历</h2>
+      <div class="item">
+        <div class="left pill">09/2013 - 07/2017</div>
+        <div class="more">
+          <h3>vue技术栈实现cnode社区</h3>
+          <ul>
+            <li><strong>项目介绍：</strong> 为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化</li>
+            <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
+            <li><strong>项目源码:</strong><a href="https://jirengu.com" target="_blank">github.com/jirengu</a></li>
+            <li><strong>预览项目:</strong><a href="https://jirengu.com" target="_blank">点击查看</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <div class="left pill">09/2013 - 07/2017</div>
+        <div class="more">
+          <h3>vue技术栈实现cnode社区</h3>
+          <ul>
+            <li><strong>项目介绍：</strong> 为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化</li>
+            <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
+            <li><strong>项目源码:</strong><a href="https://jirengu.com" target="_blank">github.com/jirengu</a></li>
+            <li><strong>预览项目:</strong><a href="https://jirengu.com" target="_blank">点击查看</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <div class="left pill">09/2013 - 07/2017</div>
+        <div class="more">
+          <h3>vue技术栈实现cnode社区</h3>
+          <ul>
+            <li><strong>项目介绍：</strong> 为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化</li>
+            <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
+            <li><strong>项目源码:</strong><a href="https://jirengu.com" target="_blank">github.com/jirengu</a></li>
+            <li><strong>预览项目:</strong><a href="https://jirengu.com" target="_blank">点击查看</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
